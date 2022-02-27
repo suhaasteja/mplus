@@ -1,38 +1,144 @@
 .App {
   text-align: center;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+header {
+  height: 40px;
+  box-shadow: 0.5px 1px 4px rgb(172, 170, 170);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1rem;
+  position: fixed;
+  z-index: 10;
+  margin-top: 0;
+  background-color: white;
+  width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+main {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  margin-top: 70px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button {
+  cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.hidden {
+  display: none;
+}
+
+.sidenav-container {
+  background-color: aliceblue;
+  height: 90vh;
+  width: 200px;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.sidenav-content {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+.sidenav-content article {
+  margin: 0.5rem;
+  width: 90%;
+}
+
+.sidenav-content article button {
+  width: 100%;
+  padding: 1.3rem;
+  background-color: #2871e6;
+  background-image: linear-gradient(200deg, #508ef2 0%, #09c6f9 64%);
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.demo-container {
+  width: 100%;
+  text-align: left;
+  margin: 1rem;
+}
+
+.demo-container {
+  padding: 20px;
+}
+
+#sidenavToggleBtn {
+  background-color: white;
+  border: none;
+  padding: 0.5rem;
+  position: relative;
+  top: 2.5px;
+}
+
+#sidenavToggleBtn :hover {
+  background-color: lightgrey;
+}
+
+#paymentBtn {
+  background-color: purple;
   color: white;
+  font-weight: bold;
+  padding: 0.7rem;
+  border-radius: 5px;
+  border: none;
 }
 
-.App-link {
-  color: #61dafb;
+.dateBtns {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#dateBtn {
+  width: 60px;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  background-color: white;
+  border: 2px solid purple;
+  border-radius: 5px;
+  padding: 0.5rem;
+  font-weight: bold;
+}
+
+#slotBtn {
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  background-color: white;
+  border: 2px solid purple;
+  border-radius: 5px;
+  padding: 0.5rem;
+  font-weight: bold;
+}
+button:hover {
+  background-color: orange;
+}
+
+@media screen and (max-width: 600px) {
+  .App {
+    font-size: small;
   }
-  to {
-    transform: rotate(360deg);
+
+  header {
+    width: 95%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .sidenav-container {
+    width: 100vw;
+  }
+
+  .demo-hidden {
+    display: none;
   }
 }
